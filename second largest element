@@ -1,0 +1,28 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    
+    int arr[]={10,15,20,3};
+    int n=sizeof(arr)/sizeof(arr[0]);
+    int first=0;
+    int second=-1;
+    for(int i=1;i<n;i++)
+    {
+        if(arr[i]>arr[first])
+        {
+            second=first;
+            first=i;
+        }
+        else if(second==-1||arr[i]>arr[second])
+        {
+                second =i;
+        }
+        
+    }
+    return second;
+    
+}
+    
